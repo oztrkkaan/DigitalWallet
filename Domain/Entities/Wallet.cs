@@ -10,7 +10,7 @@ public class Wallet : AuditableEntity
     public Customer Customer { get; set; }
     public ICollection<WalletTransaction> WalletTransactions { get; set; }
 
-    public void AddBalance(decimal amount)
+    public void AddDeposit(decimal amount)
     {
         var last = WalletTransactions
             .OrderByDescending(m => m.CreatedAt)

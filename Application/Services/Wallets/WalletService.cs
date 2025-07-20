@@ -46,7 +46,7 @@ public class WalletService : IWalletService
                 throw new Exception("Wallet not found for the customer.");
 
 
-            wallet.AddBalance(request.Amount);
+            wallet.AddDeposit(request.Amount);
 
             await connection.ExecuteAsync(
                 updateWalletSql,
