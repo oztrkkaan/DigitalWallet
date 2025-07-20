@@ -65,7 +65,7 @@ public class WalletService : IWalletService
                 new
                 {
                     WalletId = wallet.Id,
-                    Type = "Deposit",
+                    Type = (int)walletTransaction.Type,
                     Amount = request.Amount,
                     BeforeBalance = walletTransaction.BeforeBalance,
                     AfterBalance = walletTransaction.AfterBalance,
